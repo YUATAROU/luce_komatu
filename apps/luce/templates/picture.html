@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>お料理の写真</h2>
+<div class="image-grid">
+  {% for filename in images %}
+    <div class="image-item">
+      <img src="{{ url_for('luce.static', filename='img/' ~ filename) }}" alt="{{ filename }}">
+      
+    </div>
+  {% endfor %}
+</div>
+
+{% endblock %}

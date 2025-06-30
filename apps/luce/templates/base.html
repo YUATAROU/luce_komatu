@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>LUCE</title>
+    <link rel="stylesheet" href="{{ url_for('luce.static', filename='style.css') }}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+
+  <body>
+
+<img src="{{ url_for('luce.static', filename='img/luce.png') }}"
+    alt="ロゴ" class="img-logo">
+
+    <nav class="navbar">
+    <ul class="navbar-nav">
+
+      <li class="nav-item">
+        <a href="{{ url_for('luce.index') }}">トップ</a></li>
+
+
+      <li class="nav-item">
+        <a href="{{ url_for('luce.menu') }}">メニュー</a></li>
+
+      <li class="nav-item">
+        <a href="{{ url_for('luce.course') }}">大皿プラン</a></li>
+
+      <li class="nav-item">
+        <a href="{{ url_for('luce.access') }}">アクセス</a></li>
+
+<li class="nav-item">
+        <a href="{{ url_for('luce.picture') }}">写真</a></li>
+
+      </ul></nav>
+
+  {% block content %}{% endblock %}
+
+  </body>
+</html>

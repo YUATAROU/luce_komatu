@@ -1,0 +1,226 @@
+.logo{
+  font-size: 2.5rem;
+  text-decoration: none;
+  color:#ff7f7f 
+}
+
+.navbar{        
+  text-align: center;  
+  background-color: transparent;
+  padding: 1rem 0;  
+}
+
+.navbar-nav{
+  display: inline-flex;   
+  list-style: none; 
+  border-radius: 10px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.05);
+  gap: 1.5rem;
+  padding: 0.5rem 1rem;   
+  background-color: #eee9e6;
+}
+
+.nav-item {
+  margin: 0 15px;
+}
+
+.nav-item a{
+  text-decoration: none;
+  color: black;
+  font-size: 17px;
+}
+
+.nav-item a:hover{
+  color: #5896d4b6;
+  text-decoration: underline; 
+}
+
+body {
+  font-family: 'Noto Serif', serif;
+  background-color: #f9fcff;
+  text-align: center;
+}
+
+.img-logo{
+  width: 200px;
+  height: auto;
+  margin-left: 20px; 
+}
+
+.syo-kai, .cou, .menu, .ac{
+  background-color: #fefdf9;
+  border: 1px solid #e6dfcf;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 2rem auto;
+  max-width: 800px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+  font-size: 15px;
+  line-height: 1.8;
+  color: #3d2d1f;
+}
+
+.papa{
+  display: flex;
+  justify-content: flex-end;  
+  margin-right: 100px;
+}
+
+table {
+  width: 100%;
+  max-width: 800px;
+  margin: 2rem auto;
+  border-collapse: collapse;
+  background-color: #fefdf9;
+  border: 1px solid #e6dfcf;
+  border-radius: 10px;
+  overflow: hidden; /* 角丸が効くように */
+  font-size: 14px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+}
+
+th, td {
+  padding: 1rem;
+  text-align: center;
+  border-bottom: 1px solid #eee5d9;
+}
+
+th {
+  background-color: #f8f3e9;
+  color: #5a3b1e;
+  font-weight: bold;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+h4 {
+  margin-bottom: 0;
+}
+p {
+  margin-top: 0;
+}
+.menu ul{
+  list-style: none; 
+}
+
+.google-map {
+  display: inline-block; /* 四角っぽくなる */
+  background-color: #6c9bd2;
+  color: black;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.google-map:hover{
+  background-color: #5781c8;
+  text-decoration: underline; 
+}
+
+.category-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.category-button {
+  padding: 0.4rem 1rem;
+  background-color: #f0f0f0;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: #333;
+  transition: background-color 0.2s;
+}
+
+.category-button:hover {
+  background-color: #ddd;
+}
+
+@media (max-width: 768px) {
+  .menu-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .menu-list li {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  .navbar {
+    flex-direction: column;
+    padding: 0.5rem;
+  }
+
+  .navbar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .syo-kai, .cou {
+    padding: 1rem;
+    font-size: 0.95rem;
+  }
+
+  table {
+    font-size: 0.85rem;
+    width: 100%;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .google-map iframe {
+  width: 100%;       /* 横幅を親要素にフィットさせる */
+  max-width: 600px;  /* PC表示時の最大幅を指定（任意） */
+  height: 300px;     /* 高さは固定で良ければこれでOK */
+  max-height: 400px; /* 必要に応じて調整 */
+  border: none;
+}
+}
+
+.image-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px; /* 画像同士の隙間 */
+  justify-content: center;
+}
+
+.image-item {
+  flex: 1 1 200px; /* 最小200px幅で余裕あれば伸びる */
+  max-width: 200px;
+  box-sizing: border-box;
+}
+
+.image-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* スマホ向け：幅が狭い時は縦並び */
+@media screen and (max-width: 600px) {
+  .image-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  .image-item {
+    max-width: 90%; /* スマホ画面の90%幅に */
+  }
+}
