@@ -27,6 +27,6 @@ def create_app(config_key):
   # fictionからviewsをimport
   from apps.luce import views as fic_views
   #register_blueprintを使いviewsのfictionをアプリへ登録する
-  app.register_blueprint(fic_views.luce, url_prefix="/")
+  app.register_blueprint(fic_views.luce, url_prefix="/luce")
   from apps.luce import models 
   return app

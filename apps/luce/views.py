@@ -4,8 +4,8 @@ from apps.luce.models import Category, Menu
 import os
 
 # Blueprintでfictionアプリを生成
-luce = Blueprint("luce", __name__, template_folder="templates",
-                    static_folder="static")
+luce = Blueprint("luce", __name__, template_folder="templates", 
+                  static_folder="static")
 
 @luce.route("/")
 def index():
